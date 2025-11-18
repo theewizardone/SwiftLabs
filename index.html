@@ -22,7 +22,28 @@
         createIcons({ icons: { Code, MessageCircle, Zap, Award, Layers, Clock, DollarSign, Menu, X, CheckCircle, Smartphone, MapPin, Mail, Linkedin, Youtube, Twitter, Instagram, Send, Server, Database, Cloud, ChevronDown } });
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524653640899702"
-     crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script><!-- Load Lucide Icons with ALL required icons -->
+    <script type="module">
+        import { 
+            createIcons, 
+            Code, MessageCircle, Zap, Award, Layers, Clock, 
+            DollarSign, Menu, X, CheckCircle, Smartphone, 
+            MapPin, Mail, Linkedin, Youtube, Twitter, Instagram, 
+            Send, Server, Database, Cloud, ChevronDown, 
+            ArrowRight, Github 
+        } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
+        
+        createIcons({ 
+            icons: { 
+                Code, MessageCircle, Zap, Award, Layers, Clock, 
+                DollarSign, Menu, X, CheckCircle, Smartphone, 
+                MapPin, Mail, Linkedin, Youtube, Twitter, Instagram, 
+                Send, Server, Database, Cloud, ChevronDown, 
+                ArrowRight, Github 
+            } 
+        });
+    </script>
+    
     <style>
         /* Custom styles for the dark theme and smooth scrolling */
         html {
@@ -115,7 +136,7 @@
             <p class="text-gray-400 text-lg">Swift Creations</p>
         </div>
     </div>
-
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://api.emailjs.com;">
     <!-- Navbar -->
     <header class="sticky top-0 z-50 bg-primary/90 backdrop-blur-md header-shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -916,7 +937,7 @@
 
     <script>
         // Initialize EmailJS (Replace with your actual Public Key)
-        emailjs.init(eJZinAtwW_h20UZ7Y); // Get from EmailJS dashboard
+        emailjs.init('eJZinAtwW_h20UZ7Y'); // Get from EmailJS dashboard
 
         // Loading animation
         window.addEventListener('load', () => {
