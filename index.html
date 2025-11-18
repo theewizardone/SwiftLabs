@@ -916,7 +916,7 @@
 
     <script>
         // Initialize EmailJS (Replace with your actual Public Key)
-        emailjs.init("B9M36X9lFPP7f3v-E"); // Get from EmailJS dashboard
+        emailjs.init("eJZinAtwW_h20UZ7Y"); // Get from EmailJS dashboard
 
         // Loading animation
         window.addEventListener('load', () => {
@@ -1118,12 +1118,14 @@
             } catch (error) {
                 console.error('EmailJS Error:', error);
                 
-                // User-friendly error messages
-                if (error.status === 0 || error.message.includes('Network')) {
-                    showMessage('⚠️ Network error. Please check your internet connection and try again.', 'error');
-                } else {
-                    showMessage('❌ Sorry, there was an error sending your message. Please try again or contact us directly at helloswiftcreations@gmail.com', 'error');
-                }
+                 // User-friendly error messages
+    if (error.status === 0) {
+        showMessage('⚠️ Network error. Please check your internet connection and try again.', 'error');
+    } else if (error.text && error.text.includes('Public Key')) {
+        showMessage('❌ Email service configuration error. Please contact support.', 'error');
+    } else {
+        showMessage('❌ Sorry, there was an error sending your message. Please try again or contact us directly at helloswiftcreations@gmail.com', 'error');
+    }
                 
                 // Fallback: Open email client after 2 seconds
                 setTimeout(() => {
