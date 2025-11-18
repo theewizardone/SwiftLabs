@@ -213,7 +213,7 @@
                 
                 <!-- Scroll indicator -->
                 <div class="mt-16 animate-bounce">
-                    <a href="#services" class="text-gray-400 hover:text-accent transition duration-300">
+                    <a href="#services" title="Services" aria-label="Services" class="text-gray-400 hover:text-accent transition duration-300">
                         <i data-lucide="chevron-down" class="w-8 h-8 mx-auto"></i>
                     </a>
                 </div>
@@ -916,7 +916,7 @@
 
     <script>
         // Initialize EmailJS (Replace with your actual Public Key)
-        emailjs.init("YOUR_PUBLIC_KEY_HERE"); // Get from EmailJS dashboard
+        emailjs.init("B9M36X9lFPP7f3v-E"); // Get from EmailJS dashboard
 
         // Loading animation
         window.addEventListener('load', () => {
@@ -1089,8 +1089,8 @@
 
                 // Send email using EmailJS
                 const response = await emailjs.send(
-                    'YOUR_SERVICE_ID',    // Replace with your EmailJS Service ID
-                    'YOUR_TEMPLATE_ID',   // Replace with your EmailJS Template ID
+                    'service_7n4s3rfID',    // Replace with your EmailJS Service ID
+                    'template_1qnwqqr',   // Replace with your EmailJS Template ID
                     templateParams
                 );
 
