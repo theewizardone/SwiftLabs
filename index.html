@@ -186,6 +186,12 @@
         .shake-animation {
             animation: shake 0.5s ease-in-out;
         }
+
+        /* Map iframe styles moved from inline to CSS class to avoid inline styles */
+        .map-iframe {
+            border: 0;
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-primary text-gray-50 min-h-screen font-sans gradient-bg">
@@ -212,7 +218,7 @@
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 lg:space-x-4 text-sm font-medium items-center">
+                <nav class="hidden md:flex space-x-6 lg:space-x-4 text-sm font-medium items-center">
                 <a href="#home" class="text-gray-400 hover:text-accent transition duration-300">HOME</a>
                 <div class="relative group">
                     <button class="text-gray-400 hover:text-accent transition duration-300 flex items-center">
@@ -226,7 +232,10 @@
                     </div>
                 </div>
                 <a href="#why-us" class="text-gray-400 hover:text-accent transition duration-300">Why Us</a>
+                <a href="#team" class="text-gray-400 hover:text-accent transition duration-300">Team</a>
+                <a href="#portfolio" class="text-gray-400 hover:text-accent transition duration-300">Portfolio</a>
                 <a href="#processes" class="text-gray-400 hover:text-accent transition duration-300">Process</a>
+                <a href="#blog" class="text-gray-400 hover:text-accent transition duration-300">Blog</a>
                 <a href="#pricing" class="text-gray-400 hover:text-accent transition duration-300">Pricing</a>
                 <a href="#contact-us" class="px-4 py-2 bg-accent text-gray-900 font-semibold rounded-lg hover-glow transition duration-300">Contact Us</a>
             </nav>
@@ -250,7 +259,10 @@
                 <a href="#home" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>HOME</a>
                 <a href="#services" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Services</a>
                 <a href="#why-us" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Why Us</a>
+                <a href="#team" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Team</a>
+                <a href="#portfolio" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Portfolio</a>
                 <a href="#processes" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Process</a>
+                <a href="#blog" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Blog</a>
                 <a href="#pricing" class="text-2xl text-gray-50 hover:text-accent transition duration-300" data-menu-item>Pricing</a>
                 <a href="#contact-us" class="text-2xl px-6 py-3 bg-accent text-gray-900 font-semibold rounded-lg hover-glow transition duration-300" data-menu-item>Contact Us</a>
             </div>
@@ -298,6 +310,46 @@
                     <a href="#services" title="Services" aria-label="Services" class="text-gray-400 hover:text-accent transition duration-300">
                         <i data-lucide="chevron-down" class="w-8 h-8 mx-auto"></i>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 sm:py-32 border-t border-gray-900 bg-[#0b0b0b]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <p class="text-accent uppercase font-semibold mb-2 tracking-wider">Our Work</p>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-50 mb-4">Recent Projects</h2>
+                    <p class="text-gray-400 text-xl max-w-3xl mx-auto">A selection of projects highlighting our capabilities in web apps, e-commerce, and design.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden card-hover">
+                        <div class="h-48 bg-gradient-to-r from-purple-600 to-blue-600"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-50 mb-2">Writer Wizard</h3>
+                            <p class="text-gray-400 mb-4">A writing assistant project — source code and details on GitHub.</p>
+                            <a href="https://github.com/theewizardone/WriterWizard" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold hover:underline">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden card-hover">
+                        <div class="h-48 bg-gradient-to-r from-green-600 to-teal-600"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-50 mb-2">Finance Blog</h3>
+                            <p class="text-gray-400 mb-4">A finance blog project showcasing content-driven design and SEO best practices.</p>
+                            <a href="https://github.com/theewizardone/Finance-Blog" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold hover:underline">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden card-hover">
+                        <div class="h-48 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-50 mb-2">MagicStream</h3>
+                            <p class="text-gray-400 mb-4">A streaming-related project with real-time features; source on GitHub.</p>
+                            <a href="https://github.com/theewizardone/MagicStream" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold hover:underline">View on GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -587,6 +639,50 @@
                             See Our Mission in Action
                             <i data-lucide="message-circle" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition duration-200"></i>
                         </a>
+                        <p class="text-gray-400 text-lg mt-4 leading-relaxed">To deliver reliable digital products that are secure, scalable, and designed for growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 sm:py-28 border-t border-gray-900 bg-[#0d0d0d]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <p class="text-accent uppercase font-semibold mb-2 tracking-wider">Who We Are</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-50">Meet Our Team</h2>
+                    <p class="text-gray-400 max-w-3xl mx-auto mt-3">A dedicated group of specialists delivering full-stack development, design, and growth-focused marketing.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-50 mb-2">Lead Software Engineer / Project Manager</h4>
+                        <p class="text-gray-400">Full-stack development, system architecture, API integrations.</p>
+                    </div>
+
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-50 mb-2">UI/UX Designer</h4>
+                        <p class="text-gray-400">Website layouts, branding, user experience optimization.</p>
+                    </div>
+
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-50 mb-2">Frontend Developer</h4>
+                        <p class="text-gray-400">React/Next.js expertise, responsive UI implementation.</p>
+                    </div>
+
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-50 mb-2">Backend Developer</h4>
+                        <p class="text-gray-400">Laravel, Node.js, or WordPress CMS customization.</p>
+                    </div>
+
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-50 mb-2">QA & Tester</h4>
+                        <p class="text-gray-400">Bug testing, performance evaluation, cross-device quality assurance.</p>
+                    </div>
+
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-50 mb-2">Content Manager / SEO Specialist</h4>
+                        <p class="text-gray-400">Optimizing content structure, metadata, article visibility.</p>
                     </div>
                 </div>
             </div>
@@ -788,6 +884,41 @@
             </div>
         </section>
 
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 sm:py-28 border-t border-gray-900 bg-[#0b0b0b]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <p class="text-accent uppercase font-semibold mb-2 tracking-wider">Insights</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-50">From Our Blog</h2>
+                    <p class="text-gray-400 max-w-3xl mx-auto mt-3">Helpful articles on web development, design, and digital marketing to keep your site discoverable.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <article class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-gray-50 mb-2">Top 7 Web Development Trends Dominating 2025</h3>
+                        <p class="text-gray-400 mb-4">Discover the top web development trends shaping 2025, including AI-powered websites, serverless architecture, PWAs, and headless CMS solutions.</p>
+                        <a href="/blog/top-7-web-development-trends-dominating-2025.html" class="text-accent font-semibold hover:underline">Read article</a>
+                    </article>
+
+                    <article class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-gray-50 mb-2">Why Good Web Design Matters in 2025</h3>
+                        <p class="text-gray-400 mb-4">Learn why professional web design is crucial in 2025: UI/UX trends, accessibility, and branding best practices.</p>
+                        <a href="/blog/why-good-web-design-matters-2025.html" class="text-accent font-semibold hover:underline">Read article</a>
+                    </article>
+
+                    <article class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-gray-50 mb-2">Digital Marketing in 2025: Strategies That Actually Work</h3>
+                        <p class="text-gray-400 mb-4">Explore winning digital marketing strategies for 2025, including SEO, content marketing, email automation, and AI analytics.</p>
+                        <a href="/blog/digital-marketing-2025-strategies-that-actually-work.html" class="text-accent font-semibold hover:underline">Read article</a>
+                    </article>
+                </div>
+
+                <div class="text-center mt-8">
+                    <a href="/blog" class="inline-flex items-center px-6 py-3 bg-accent text-gray-900 font-semibold rounded-lg hover-glow">See all posts</a>
+                </div>
+            </div>
+        </section>
+
         <!-- 8. Contact Us Section -->
         <section id="contact-us" class="py-20 sm:py-32 border-t border-gray-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -917,6 +1048,34 @@
         </section>
     </main>
 
+        <!-- Map Section -->
+        <section id="map" class="py-12 border-t border-gray-900 bg-[#0b0b0b]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-gray-400 mb-6">
+                    <iframe
+                        title="Swift Creations - P.O. BOX 00100, Nairobi, Kenya (map)"
+                        src="https://maps.google.com/maps?q=Nairobi%2C%20Kenya&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="420"
+                        class="map-iframe"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                        width="100%"
+                        height="420"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+
+                    <div class="px-6 py-4 bg-gray-900 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between">
+                        <p class="text-gray-400 mb-2 sm:mb-0">P.O. BOX 00100, Nairobi, Kenya</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=P.O.+BOX+00100%2C+Nairobi%2C+Kenya" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-accent text-gray-900 font-semibold rounded-lg hover-glow">Get directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -960,6 +1119,9 @@
                         <li><a href="#our-story" class="text-gray-400 hover:text-accent transition duration-300">Our Story</a></li>
                         <li><a href="#processes" class="text-gray-400 hover:text-accent transition duration-300">Our Process</a></li>
                         <li><a href="#case-studies" class="text-gray-400 hover:text-accent transition duration-300">Case Studies</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-accent transition duration-300">Team</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-accent transition duration-300">Portfolio</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-accent transition duration-300">Blog</a></li>
                         <li><a href="#pricing" class="text-gray-400 hover:text-accent transition duration-300">Pricing</a></li>
                         <li><a href="#faqs" class="text-gray-400 hover:text-accent transition duration-300">FAQs</a></li>
                         <li><a href="#contact-us" class="text-gray-400 hover:text-accent transition duration-300">Contact</a></li>
